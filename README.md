@@ -31,5 +31,4 @@ The comment will only be added once per transgression.
 ## Example PR Comment
 
 The screenshot below demonstrates the comments that can be expected when using the action
-
-![Example PR Comment](images/pr_commenter.png)
+<img src="https://user-images.githubusercontent.com/62197019/131106406-6380b66a-672d-44d7-bdb1-2e2da4e5db10.png" height="400px">
