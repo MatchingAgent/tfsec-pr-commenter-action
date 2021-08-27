@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/owenrumney/go-github-pr-commenter/commenter"
+	"github.com/MatchingAgent/go-github-pr-commenter/commenter"
 )
 
 func main() {

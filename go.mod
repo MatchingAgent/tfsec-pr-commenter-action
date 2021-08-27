@@ -1,5 +1,5 @@
-module github.com/aquasecurity/tfsec-github-commenter-action
+module github.com/MatchingAgent/tfsec-pr-commenter-action
 
 go 1.15
 
-require github.com/owenrumney/go-github-pr-commenter v0.0.11
+require github.com/MatchingAgent/go-github-pr-commenter v0.0.14

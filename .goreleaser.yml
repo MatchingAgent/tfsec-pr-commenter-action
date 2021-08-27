@@ -26,6 +26,6 @@ archives:
 release:
   prerelease: auto
   github:
-    owner: tfsec
+    owner: MatchingAgent
     name: tfsec-pr-commenter-action
 
