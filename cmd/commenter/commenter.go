@@ -72,12 +72,13 @@ func main() {
 }
 
 func generateErrorMessage(result result) string {
-	return fmt.Sprintf(`tfsec check %s failed. 
-
-%s
-
-For more information, see https://tfsec.dev/docs/%s/%s/`,
-		result.RuleID, result.Description, strings.ToLower(result.RuleProvider), result.RuleID)
+	return fmt.Sprintf(
+		"## result\ntfsec check %s failed.\n## severity\n⚠️%s\n## reason\n%s\n## how to ignore\n`#tfsec:ignore:%s`([refs](https://github.com/aquasecurity/tfsec#ignoring-warnings))\n\nFor more information, [see](%s)\n",
+		result.RuleID,
+		result.Severity,
+		result.Description,
+		result.LegacyRuleID,
+		result.Links[0])
 }
 
 func extractPullRequestNumber() (int, error) {
