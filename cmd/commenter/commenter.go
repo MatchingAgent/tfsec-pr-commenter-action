@@ -53,6 +53,10 @@ func main() {
 	} else {
 		fmt.Printf("The PR review was written successfully.")
 	}
+	if prReviewEvent == commenter.RequestChanges {
+		fmt.Println("The commiteed code did not pass the security check.")
+		os.Exit(-1)
+	}
 }
 
 func selectPRReviewEventBy(comments []*github.DraftReviewComment) string {
