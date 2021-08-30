@@ -1,4 +1,4 @@
-# github.com/MatchingAgent/go-github-pr-commenter v0.0.16
+# github.com/MatchingAgent/go-github-pr-commenter v0.0.17
 ## explicit
 github.com/MatchingAgent/go-github-pr-commenter/commenter
 # github.com/golang/protobuf v1.5.2
