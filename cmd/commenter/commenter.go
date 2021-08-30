@@ -12,9 +12,13 @@ import (
 	"github.com/google/go-github/v38/github"
 )
 
+func init() {
+	commenter.ApproveBody = "Approved by tfsec:tada:"
+	commenter.RequestChangesBody = "Requested changes by tfsec:rotating_light:"
+}
+
 func main() {
 	fmt.Println("Starting the github commenter...")
-
 	token := os.Getenv("INPUT_GITHUB_TOKEN")
 	if len(token) == 0 {
 		fail("The INPUT_GITHUB_TOKEN has not been set")
