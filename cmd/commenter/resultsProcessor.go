@@ -5,19 +5,19 @@ import (
 	"io/ioutil"
 )
 
-type checkRange struct {
+type CheckRange struct {
 	Filename  string `json:"filename"`
 	StartLine int    `json:"start_line"`
 	EndLine   int    `json:"end_line"`
 }
 
-type result struct {
+type Result struct {
 	RuleID          string      `json:"rule_id"`
 	LegacyRuleID    string      `json:"legacy_rule_id"`
 	RuleDescription string      `json:"rule_description"`
 	RuleProvider    string      `json:"rule_provider"`
 	Links           []string    `json:"links"`
-	Range           *checkRange `json:"location"`
+	Range           *CheckRange `json:"location"`
 	Description     string      `json:"description"`
 	RangeAnnotation string      `json:"-"`
 	Severity        string      `json:"severity"`
@@ -25,8 +25,8 @@ type result struct {
 
 const resultsFile = "results.json"
 
-func loadResultsFile() ([]result, error) {
-	results := struct{ Results []result }{}
+func loadResultsFile() ([]Result, error) {
+	results := struct{ Results []Result }{}
 
 	file, err := ioutil.ReadFile(resultsFile)
 	if err != nil {
